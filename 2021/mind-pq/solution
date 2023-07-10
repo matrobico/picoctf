@@ -1,0 +1,19 @@
+Decrypt my super sick RSA:
+c: 240986837130071017759137533082982207147971245672412893755780400885108149004760496
+n: 831416828080417866340504968188990032810316193533653516022175784399720141076262857
+e: 65537
+
+Notes:
+- n is the product of 2 large prime numbers
+- e is a chosen large positive integer (and is coprime with totient of n)
+    - e having a short bit length results in a more efficient algorithm
+
+General Steps:
+- n is small enough that we can find the prime factors: p and q
+- we can decrypt using c, d, and n
+- d = e(mod * totient(n)), totient(n) = lcm(p-1,q-1)
+
+Encryption:
+
+Decryption:
+m(c) = c^d mod n

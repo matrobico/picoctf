@@ -1,0 +1,20 @@
+key_full_template_trial = "picoCTF{1n_7h3_|<3y_of_" + "xxxxxxxx" + "}"
+Username_trial = "GOUGH"
+bUsername_trial = b"GOUGH"
+
+check_key(user_key, bUsername_trial)
+
+Steps to solution:
+- Choose option C
+- Need len of user input to be the same as the flag
+- First part of user inputted key should be equal to "key_part_static1_trial" (first 23 characters: 0-22)
+- After which, it starts to compare the input characters to a sha256 has of username_trial (hashlib.sha256(username_trial).hexdigest()[x]) (starting from 24th character: 23)
+    - key[23] = f
+    - key[24] = 9
+    - key[25] = 1
+    - key[26] = 1
+    - key[27] = a
+    - key[28] = 4
+    - key[29] = 8
+    - key[30] = 6
+- key -> picoCTF{1n_7h3_|<3y_of_f911a486}
