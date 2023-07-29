@@ -15,4 +15,4 @@ print("Offset: " + str(bmpOffset))
 
 # DIB Header
 DIB = fbytes[14:53]
-bmpWidth = DIB[[14:17]
+bmpWidth = DIB[14:17]
