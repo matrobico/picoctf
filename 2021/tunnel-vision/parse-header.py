@@ -34,5 +34,15 @@ print("Color Planes: " + str(colorPlanes))
 print("Bits Per Pixel: " + str(bitsPerPixel))
 print("Compression Method: " + str(compressionMethod))
 
+# No "Extra Bit Masks"
+
+# Color Table (mandatory for color depths <= 8 bits)
+
+# Gap1 (artifact of the file offset to pixel array in the bmp file header)
+
 # Pixel Array (not optional)
 # Pixel array must begin at address that is multiple of 4 bytes
+
+# Gap2
+
+# ICC Color Profile
