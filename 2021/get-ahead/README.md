@@ -12,7 +12,7 @@
 
 ### Solution
 First things first, we can head to the given link and see what we're up against:
-![Red Space](../../images/getAhead_1.png)
+![Red Space](../../images/getAhead_red.png)
 
 It's a red page with 2 buttons: one for red and one for blue. Clicking on either button changes the background page color to, you guessed it, either red or blue. Taking a look at the page source in developer tools doesn't yield anything, but perhaps we can use burp suite to see what the requests and responses look like.
 
