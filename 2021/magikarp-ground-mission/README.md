@@ -9,5 +9,8 @@
 > **Hint 1: Finding a cheatsheet for bash would be really helpful!**
 
 ### Solution
+Connecting to the server via `ssh` and running `ls` shows us 2 files: one that contains a third of the flag, and another of the next location. This pattern repeates until the flag is found.
+![Solution](../../images/magikarp_1.png)
 
 ### Flag
+`picoCTF{xxsh_0ut_0f_\/\/4t3r_21cac893}`

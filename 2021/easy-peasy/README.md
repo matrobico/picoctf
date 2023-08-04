@@ -1,12 +1,12 @@
-# Magikarp Ground Mission
-> General Skills
+# Easy Peasy
+> Cryptography
 
 ### Description
-> Do you know how to move between directories and read files in the shell? Start the container, `ssh` to it, and then `ls` once connected to begin. Login via `ssh` as `ctf-player` with the password, `abcba9f7`
+> A one-time pad is unbreakable, but can you manage to recover the flag? (Wrap with picoCTF{})
 >
-> Additional details will be available after launching your challenge instance.
+> `nc mercury.picoctf.net 20266` [otp.py](https://mercury.picoctf.net/static/84c434ada6e2f770b5000292cadae7eb/otp.py)
 >
-> **Hint 1: Finding a cheatsheet for bash would be really helpful!**
+> **Hint 1: Maybe there's a way to make this a 2x pad.**
 
 ### Solution
 
