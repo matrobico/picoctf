@@ -17,6 +17,7 @@ def startup(key_location):
 	key_location = stop
 
 	result = list(map(lambda p, k: "{:02x}".format(ord(p) ^ k), flag, key))
+	print("This is lambda map: {}".format(map(lambda p, k: "{:02x}".format(ord(p) ^ k), flag, key)))
 	print("This is the encrypted flag!\n{}\n".format("".join(result)))
 
 	return key_location
@@ -27,7 +28,9 @@ def encrypt(key_location):
 		return -1
 
 	start = key_location
+	print("Start: {}".format(start))
 	stop = key_location + len(ui)
+	print("Stop: {}".format(stop))
 
 	kf = open(KEY_FILE, "rb").read()
 
