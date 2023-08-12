@@ -13,4 +13,6 @@ Need another ciphertext of any message, but using the same key portion. Two ciph
 
 To get a message of my choosing encrypted with the same key portion, I need to feed enough input to get the key to cycle back to the beginning (code cycles key use).
 
+Need to feet up to 5000, so it cycles back to a start index of 0, then 
+
 ### Flag

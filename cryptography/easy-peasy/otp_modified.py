@@ -2,7 +2,7 @@
 import os.path
 
 KEY_FILE = "key"
-KEY_LEN = 50000
+KEY_LEN = 250
 FLAG_FILE = "flag"
 
 
@@ -18,6 +18,7 @@ def startup(key_location):
 
 	result = list(map(lambda p, k: "{:02x}".format(ord(p) ^ k), flag, key))
 	print("This is the encrypted flag!\n{}\n".format("".join(result)))
+	print("Key location: {}".format(key_location))
 
 	return key_location
 
