@@ -17,7 +17,10 @@ def startup(key_location):
 	key_location = stop
 
 	result = list(map(lambda p, k: "{:02x}".format(ord(p) ^ k), flag, key))
+	print("This is the encrypted flag without join!\n{}\n".format(result))
 	print("This is the encrypted flag!\n{}\n".format("".join(result)))
+	flag = "".join(result)
+	print("Length of flag: {}".format(len(flag)))
 	print("Key location: {}".format(key_location))
 
 	return key_location
