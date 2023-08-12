@@ -9,5 +9,8 @@
 > **Hint 1: Maybe there's a way to make this a 2x pad.**
 
 ### Solution
+Need another ciphertext of any message, but using the same key portion. Two ciphertexts of the same key is known as Two-Time Pad and can be used to break encryption.
+
+To get a message of my choosing encrypted with the same key portion, I need to feed enough input to get the key to cycle back to the beginning (code cycles key use).
 
 ### Flag
