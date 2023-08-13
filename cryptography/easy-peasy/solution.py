@@ -29,4 +29,9 @@ print("Length of my_cipher: {}".format(cipherLen))
 print("cipher1: {}".format(flag))
 print("cipher2: {}".format(my_cipher))
 
+for i in range(0, len(flag)):
+    result = list(map(lambda c1, c2: "{}".format(c1 ^ c2), flag, my_cipher))
+    #result = list(map(lambda c1, c2: "{:02x}".format(ord(p) ^ k), flag, key))
+print("C1 XOR C2: \n{}\n".format("".join(result)))
+
 print(conn.recvuntil(b'?')) # Receiving until user input
