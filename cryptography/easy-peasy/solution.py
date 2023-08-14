@@ -29,9 +29,15 @@ print("Length of my_cipher: {}".format(cipherLen))
 print("cipher1: {}".format(flag))
 print("cipher2: {}".format(my_cipher))
 
-for i in range(0, len(flag)):
-    result = list(map(lambda c1, c2: "{}".format(c1 ^ c2), flag, my_cipher))
-    #result = list(map(lambda c1, c2: "{:02x}".format(ord(p) ^ k), flag, key))
-print("C1 XOR C2: \n{}\n".format("".join(result)))
+# ERROR: The lists were joined, so when I go through and XOR everything here, I'm
+# XORing the wrong "things" together, rather than a byte at a time.
+# i.e. (5 XOR 2, instead of 5b XOR 23)
+result = list(map(lambda c1, c2: "{}".format(c1 ^ c2), flag, my_cipher))
+print("C1 XOR C2 not joined: {}".format(result))
+print("C1 XOR C2 joined: \n{}\n".format("".join(result)))
+"""
+for i in range (0, len(result)):
+    print("Result Character: {}".format(chr(int(result[i]))))
+"""
 
 print(conn.recvuntil(b'?')) # Receiving until user input
