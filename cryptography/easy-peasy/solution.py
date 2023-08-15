@@ -9,7 +9,9 @@ print(conn.recvline()) # Header 2
 flag = conn.recvline()
 print(flag)
 #print("Unmodified flag length: {}".format(len(flag)))
+#TODO: Figure out error here
 flagLen = (len(flag) - 1) / 2 # Grabbing flag length
+#flagLen = len(flag) - 1
 print("Length of flag: {}".format(flagLen))
 print(conn.recvuntil(b'?')) # Receiving until user input
 
