@@ -8,19 +8,24 @@ print(conn.recvline()) # Header 2
 # Extracting flag
 flag = conn.recvline()
 print(flag)
+flag = unhex(flag)
 #print("Unmodified flag length: {}".format(len(flag)))
 #TODO: Figure out error here
 flagLen = (len(flag) - 1) / 2 # Grabbing flag length
 #flagLen = len(flag) - 1
-print("Length of flag: {}".format(flagLen))
+#print("Length of flag: {}".format(flagLen))
 print(conn.recvuntil(b'?')) # Receiving until user input
 
 # Cycling back to beginning of key
 # key_location is probably on 33
 inpToCompleteCycle = KEY_LEN - flagLen
 print(conn.send(b'A' * int(inpToCompleteCycle) + b'\r\n'))
-print(conn.recvuntil(b'?'), sep='\n') # Receiving until user input
+#print(conn.recvuntil(b'?'), sep='\n') # Receiving until user input
+conn.sendlineafter("What data would you like to encrypt? ", flag)
+#print(conn.send(flag))
+print(conn.recvline())
 
+"""
 # Encrypting new message using first 32 characters of key
 print(conn.send(b'A' * 32 + b'\r\n'))
 print(conn.recvline())
@@ -47,6 +52,8 @@ print("Decoded message: {}".format(decoded_message))
 # ERROR: The lists were joined, so when I go through and XOR everything here, I'm
 # XORing the wrong "things" together, rather than a byte at a time.
 # i.e. (5 XOR 2, instead of 5b XOR 23)
+"""
+
 """
 result = list(map(lambda c1, c2: "{}".format(c1 ^ c2), flag, my_cipher))
 print("C1 XOR C2 not joined: {}".format(result))

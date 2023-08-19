@@ -2,7 +2,7 @@
 > General Skills
 
 ### Description
-> Do you know how to move between directories and read files in the shell? Start the container, `ssh` to it, and then `ls` once connected to begin. Login via `ssh` as `ctf-player` with the password, `abcba9f7`
+> What integer does this program print with arguments `182476535` and `3742084308`? File: [chall.S](https://mercury.picoctf.net/static/39820b71cabc14033bca1f2db00a6801/chall.S) Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits. ex. 5614267 would be picoCTF{0055aabb})
 >
 > Additional details will be available after launching your challenge instance.
 >
