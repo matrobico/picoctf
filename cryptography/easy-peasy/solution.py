@@ -14,7 +14,10 @@ print(f"Length of flag: {flagLen}")
 # Cycling back to beginning of key
 compCyc = KEY_LEN - flagLen
 conn.sendlineafter("What data would you like to encrypt? ", 'A' * int(compCyc))
-print(conn.recvline())
+conn.sendlineafter("What data would you like to encrypt? ", bin_flag)
+conn.recvlineS()
+
+log.success("The flag: {}".format(unhex(conn.recvlineS())))
 
 """
 # Encrypting new message using first 32 characters of key
