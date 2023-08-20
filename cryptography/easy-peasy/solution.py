@@ -2,27 +2,18 @@ from pwn import *
 KEY_LEN = 50000
 
 conn = remote('mercury.picoctf.net', 20266)
-print(conn.recvline()) # Header 1
-print(conn.recvline()) # Header 2
+conn.recvuntil("This is the encrypted flag!\n")
 
-# Extracting flag
-flag = conn.recvline()
-print(flag)
-flag = unhex(flag)
-#print("Unmodified flag length: {}".format(len(flag)))
-#TODO: Figure out error here
-flagLen = (len(flag) - 1) / 2 # Grabbing flag length
-#flagLen = len(flag) - 1
-#print("Length of flag: {}".format(flagLen))
-print(conn.recvuntil(b'?')) # Receiving until user input
+# TODO: Understand recvlineS and unhex
+flag = conn.recvlineS(keepends=False)
+log.info(f"Flag: {flag}")
+bin_flag = unhex(flag)
+flagLen = len(flag) / 2
+print(f"Length of flag: {flagLen}")
 
 # Cycling back to beginning of key
-# key_location is probably on 33
-inpToCompleteCycle = KEY_LEN - flagLen
-print(conn.send(b'A' * int(inpToCompleteCycle) + b'\r\n'))
-#print(conn.recvuntil(b'?'), sep='\n') # Receiving until user input
-conn.sendlineafter("What data would you like to encrypt? ", flag)
-#print(conn.send(flag))
+compCyc = KEY_LEN - flagLen
+conn.sendlineafter("What data would you like to encrypt? ", 'A' * int(compCyc))
 print(conn.recvline())
 
 """
@@ -64,4 +55,4 @@ for i in range (0, len(result)):
     print("Result Character: {}".format(chr(int(result[i]))))
 """
 
-print(conn.recvuntil(b'?')) # Receiving until user input
+#print(conn.recvuntil(b'?')) # Receiving until user input
