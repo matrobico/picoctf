@@ -9,6 +9,6 @@
 > **Hint 1: Finding a cheatsheet for bash would be really helpful!**
 
 ### Solution
-Opening up `chall.S`, we can see that it is filled with `ARMv8-a` ISA assembly code. Therefore, [this](https://diveintosystems.org/book/C9-ARM64/index.html) document should prove useful in understanding the instructions.
+Opening up `chall.S`, we can see that it is filled with `ARMv8-a` ISA assembly code. Therefore, [this](https://diveintosystems.org/book/C9-ARM64/index.html) or [this](https://developer.arm.com/documentation/den0024/a/The-A64-instruction-set?lang=en) document should prove useful in understanding the instructions.
 
 ### Flag
