@@ -1,10 +1,8 @@
-# Magikarp Ground Mission
-> General Skills
+# Glory of the Garden
+> Forensics
 
 ### Description
-> Do you know how to move between directories and read files in the shell? Start the container, `ssh` to it, and then `ls` once connected to begin. Login via `ssh` as `ctf-player` with the password, `abcba9f7`
->
-> Additional details will be available after launching your challenge instance.
+> This [garden](https://jupiter.challenges.picoctf.org/static/4153422e18d40363e7ffc7e15a108683/garden.jpg) contains more than it seems.
 >
 > **Hint 1: Finding a cheatsheet for bash would be really helpful!**
 
