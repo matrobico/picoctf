@@ -7,9 +7,13 @@
 > **Hint 1: N/A**
 
 ### Solution
-My first instinct when opening up this packet in wireshark was to do a string search for "pico*" to see if...
+Opening up the given pcap within Wireshark displays a bunch of HTTP and TCP traffic. If we filter for only HTTP, we can see almost all packets contain encrypted data, minus a select few. Zeroing in on those select few, we can see that one of them contains what looks to be an encrypted flag:
 
-That didn't work (probably because I didn't perform the proper search) so I instead looked through all the HTTP traffic to see if I could find anything *not* encrypted and find the flag contained as data, or if I could find a GER request for the flag. Looking through the traffic, I found a unique packet that differed from the rest immediately preceeded by a GET request. Digging through this packet's data, it seemed the format of a flag was contained...
+`Gur synt vf cvpbPGS{c33xno00_1_f33_h_qrnqorrs}`
+
+At first I thought this data was encrypted by some key sent earlier in the capture, but in reality this was overthinking, and it's simply an encrypted flag sent over simple HTTP.
+
+This encrypted flag is ROT13 encoded (determined by trying different ciphers), so decoding that reveals the plaintext flag.
 
 ### Flag
-`Gur synt vf cvpbPGS{c33xno00_1_f33_h_qrnqorrs}cvpbPGS{c33xno00_1_f33_h_qrnqorrs}`
+`picoCTF{p33kab00_1_s33_u_deadbeef}`

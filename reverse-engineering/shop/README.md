@@ -2,11 +2,12 @@
 > Reverse Engineering
 
 ### Description
-> There is something on my shop network running at nc mercury.picoctf.net 59953, but I can't tell what it is. Can you?
+> Best Stuff - Cheap Stuff, Buy Buy Buy... Store Instance: [source](https://mercury.picoctf.net/static/a94b408ab46e6bd72f915d68be8aebc0/source). The shop is open for business at nc mercury.picoctf.net 42159.
 >
-> **Hint 1: What language does a CNC machine use?**
+> **Hint 1: Always check edge cases when programming**
 >
 
 ### Solution
+We're given a binary and a netcat link to a running instance of said binary.
 
 ### Flag
