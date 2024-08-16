@@ -2,13 +2,17 @@
 > Forensics
 
 ### Description
-> Matryoshka dolls are a set of wooden dolls of decreasing size placed one inside another. What's the final one?
+> I've gotten bored of handing out flags as text. Wouldn't it be cool if they were an image instead?
 >
-> Image: [this](https://mercury.picoctf.net/static/5eb456e480e485183c9c1b16952c6eda/dolls.jpg)
+> You can download the challenge files here: [challenge.zip](https://artifacts.picoctf.net/c_atlas/1/challenge.zip)
 > 
-> **Hint 1: Wait, you can hide files inside files? But how do you find them?**
+> Additional details will be available after launching your challenge instance.
 >
-> **Hint 2: Make sure to submit the flag as `picoCTF{XXXXX}`.**
+> **Hint 1: QR codes are a way of encoding data. While they're most known for storing URLs, they can store other things too**
+>
+> **Hint 2: **
+>
+> **Hint 3: **
 
 ### Solution
 
