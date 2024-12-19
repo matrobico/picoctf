@@ -18,7 +18,7 @@ Running the `file` command shows that this is indeed interpreted as a PNG file, 
 
 From running strings on this file earlier, we can see references to "ghostscript", "pdf", and other metadata that might indicate this file is also a valid PDF file. However, changing the extension to `.pdf` and trying to open it isn't working on my Mac. Therefore, we can try using the ghostscript command line tool (since we see a reference to it) to parse out this image. Or alternatively, we can use `pdftotext` to print out the PDF text in this file. Either reveals the second part of the flag:
 
-`1n_pn9_&_pdf_53b741d6}`
+`1n_pn9_&_pdf_2a6a1ea8}`
 
 ### Flag
-`picoCTF{f1u3n7_1n_pn9_&_pdf_53b741d6}`
+`picoCTF{f1u3n7_1n_pn9_&_pdf_2a6a1ea8}`
