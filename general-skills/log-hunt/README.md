@@ -1,5 +1,5 @@
 # Log Hunt
-> Forensics
+> General Skills
 
 ### Description
 > Our server seems to be leaking pieces of a secret flag in its logs. The parts are scattered and sometimes repeated. Can you reconstruct the original flag?
