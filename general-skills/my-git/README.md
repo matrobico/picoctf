@@ -1,4 +1,4 @@
-# Verify
+# My Git
 > General Skills
 
 ### Description
